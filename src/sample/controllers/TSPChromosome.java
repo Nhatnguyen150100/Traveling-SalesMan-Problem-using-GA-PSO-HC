@@ -84,10 +84,10 @@ public class TSPChromosome {
             }
         }
 
-        if(firstCrossOver.size() != TSPUtils.CITIES.length ||
-           secondCrossOver.size() != TSPUtils.CITIES.length) {
-            throw new RuntimeException("oops!");
-        }
+//        if(firstCrossOver.size() != TSPUtils.CITIES.length ||
+//           secondCrossOver.size() != TSPUtils.CITIES.length) {
+//            throw new RuntimeException("oops!");
+//        }
 
         return new TSPChromosome[] {
                 new TSPChromosome(firstCrossOver),

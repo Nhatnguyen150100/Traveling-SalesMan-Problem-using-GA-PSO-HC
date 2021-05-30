@@ -11,7 +11,7 @@ public class TSPUtils {
 
 
 //    // tạo 30 thành phố bất kỳ
-    static ArrayList<TSPGene> CITIES = generateData(30);
+    static ArrayList<TSPGene> CITIES = generateData(15);
 
     public void setCITIES(TSPGene[] CITIES, int numDataPoints) {
         TSPUtils.CITIES = generateData(numDataPoints);
