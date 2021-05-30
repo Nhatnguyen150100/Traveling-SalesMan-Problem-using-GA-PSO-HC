@@ -20,7 +20,7 @@ public class hillClimbingAlgorithmView extends Region {
 
     private final hillClimbingAlgorithm hillclimbingalgorithm;
     private static Route currentRoute = new Route();
-    private static int check = 1000;
+    private static int check = 100;
     private double Bshort, Ashort;
     private static int iterationCounter;
 
@@ -36,10 +36,10 @@ public class hillClimbingAlgorithmView extends Region {
         Timeline t1 = new Timeline();
         t1.setCycleCount(Animation.INDEFINITE);
         t1.setAutoReverse(true);
-        t1.getKeyFrames().add(new KeyFrame(Duration.millis(2), new EventHandler<ActionEvent>() {
+        t1.getKeyFrames().add(new KeyFrame(Duration.millis(5), new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
-                if ( check % 1000 == 0){
+                if ( check % 100 == 0){
                     Bshort = getShortestPath();
                 }
                 check++;
@@ -80,7 +80,7 @@ public class hillClimbingAlgorithmView extends Region {
             iterationCounter = 0;
             currentRoute = new Route(neighborhoodSolution);
         } else {
-            if(iterationCounter < 10000){
+            if(iterationCounter < 5000){
                 label.setText("Iteration : " + iterationCounter);
             }else{
                 label.setText("Iteration : MAX" );

@@ -34,7 +34,7 @@ public class GeneticAlgorithmView extends Region {
         Timeline t1 = new Timeline();
         t1.setCycleCount(Animation.INDEFINITE);
         t1.setAutoReverse(true);
-        t1.getKeyFrames().add(new KeyFrame(Duration.millis(50), new EventHandler<ActionEvent>() {
+        t1.getKeyFrames().add(new KeyFrame(Duration.millis(30), new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent actionEvent) {
                 if ( check % 15 == 0){
@@ -89,7 +89,7 @@ public class GeneticAlgorithmView extends Region {
     }
 
     private void drawBestChromosome2(javafx.scene.canvas.GraphicsContext gc) {
-        final java.util.List<TSPGene> chromosome = this.population.getAlpha().getChromosome();
+        final java.util.List<TSPGene> chromosome = this.population.getAlpha().getChromosome(); // lấy chromosome tốt nhất
         for(int i = 0; i < chromosome.size() - 1; i++) {
             TSPGene gene = chromosome.get(i);
             TSPGene neighbor = chromosome.get(i + 1);

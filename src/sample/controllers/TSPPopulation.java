@@ -26,6 +26,7 @@ public class TSPPopulation {
         return this.population.get(0);
     }
 
+    // trộn các gen trong 1 Choromosome
     private List<TSPChromosome> init(final TSPGene[] points, final int initialSize) {
         final List<TSPChromosome> eden = new ArrayList<>();
         for(int i = 0; i < initialSize; i++) {
@@ -44,7 +45,7 @@ public class TSPPopulation {
 
     // chọn lọc
     private void doSelection() {
-        this.population.sort(Comparator.comparingDouble(TSPChromosome::getDistance));
+        this.population.sort(Comparator.comparingDouble(TSPChromosome::getDistance)); // sắp xếp theo thứ tự tăng dần distance
         this.population = this.population.stream().limit(this.initialSize).collect(Collectors.toList());
     }
 

@@ -13,7 +13,7 @@ public class TSPUtils {
     private final static Random R = new Random(10000);
 
     // tạo 30 thành phố bất kỳ
-    static TSPGene[] CITIES = generateData(40);
+    static TSPGene[] CITIES = generateData(15);
 
     public void setCITIES(TSPGene[] CITIES, int numDataPoints) {
         TSPUtils.CITIES = generateData(numDataPoints);

@@ -4,23 +4,6 @@ public class hillClimbingAlgorithm {
 
     public static int maximumIterations = 1000;
 
-    public Route findShortestRoute(Route currentRoute, int iterationCounter) {
-        Route neighborhoodSolution;
-        while (iterationCounter < maximumIterations) {
-            neighborhoodSolution = getNeighborhoodSolution(new Route(currentRoute)); // on crée une solution voisine
-            if (neighborhoodSolution.getFullRouteDistance() <= currentRoute.getFullRouteDistance()) {
-                iterationCounter = 0;
-
-                currentRoute = new Route(neighborhoodSolution);
-            } else {
-                iterationCounter++;
-            }
-        }
-        return currentRoute;
-    }
-
-
-
     public Route getNeighborhoodSolution(Route route)
     {
         int random1 = 0 ;

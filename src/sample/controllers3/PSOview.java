@@ -40,7 +40,7 @@ public class PSOview extends Region {
         Timeline t1 = new Timeline();
         t1.setCycleCount(maximumIterations*2);
         t1.setAutoReverse(true);
-        t1.getKeyFrames().add(new KeyFrame(Duration.millis(50), actionEvent -> {
+        t1.getKeyFrames().add(new KeyFrame(Duration.millis(30), actionEvent -> {
             if ( check % 10 == 0){
                 Bshort = getShortestPath();
             }
